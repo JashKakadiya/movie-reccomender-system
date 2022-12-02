@@ -1,8 +1,6 @@
 from http.client import responses
-from optparse import Option
 import pickle
 from urllib import response
-from soupsieve import select
 import streamlit as st
 import pickle
 import pandas as pd
