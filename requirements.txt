@@ -1,0 +1,7 @@
+pandas
+requests
+soupsieve
+BeautifulSoup4
+streamlit
+boto3
+python-dotenv
