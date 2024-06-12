@@ -28,10 +28,12 @@ s3 = boto3.client('s3',
                   aws_access_key_id=aws_access_key_id,
                   aws_secret_access_key=aws_secret_access_key,
                   region_name=aws_region_name)
-# if not os.path.exists('movies.pkl') and os.path.exists('sim.pkl'):
-#     print("downloading")
-movie_pkl = s3.download_file(BUCKET_NAME, up_df_file_name, LOCAL_FOLDER + up_df_file_name)
-sim_pkl = s3.download_file(BUCKET_NAME, sim_file_name, LOCAL_FOLDER + sim_file_name)
+if not os.path.exists('movies.pkl'):
+    print("downloading... movies pickel")
+    movie_pkl = s3.download_file(BUCKET_NAME, up_df_file_name, LOCAL_FOLDER + up_df_file_name)
+if not os.path.exists('sim.pkl'):
+    print("downloading... sim pickel")
+    sim_pkl = s3.download_file(BUCKET_NAME, sim_file_name, LOCAL_FOLDER + sim_file_name)
 
 up_df = pd.read_pickle(r"movies.pkl")
 sim = pd.read_pickle(r"sim.pkl")
