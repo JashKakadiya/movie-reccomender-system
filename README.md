@@ -16,6 +16,6 @@ Welcome to the Movie Recommendation System! This project emulates the recommenda
 
 ## Usage
 
-The system is accessible via the following link: [Movie Recommendation System](https://movie-reccomender-system.onrender.com)
+The system is accessible via the following link: [Movie Recommendation System](https://movie-reccomender-system-v1-1.streamlit.app/)
 
 
